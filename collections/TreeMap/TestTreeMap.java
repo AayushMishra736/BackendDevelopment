@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class TestTreeMap {
-
 	public static void main(String[] args) {
 	TreeMap<Integer,String> map = new TreeMap<Integer,String>();
 	map.put(101,"Chicago");
@@ -23,7 +22,6 @@ public class TestTreeMap {
     System.out.println("descendingMap: "+ map.descendingMap());  
     System.out.println("headMap: "+ map.headMap(102,true));  
     System.out.println("tailMap: "+ map.tailMap(102,true));   
-    System.out.println("subMap: "+ map.subMap(100,false,102,true));   
-	
+    System.out.println("subMap: "+ map.subMap(100,false,102,true));   	
 	}
 }
