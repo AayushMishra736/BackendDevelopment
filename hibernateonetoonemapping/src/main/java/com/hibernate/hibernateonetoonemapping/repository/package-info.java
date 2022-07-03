@@ -1,0 +1,1 @@
+package com.hibernate.hibernateonetoonemapping.repository;
