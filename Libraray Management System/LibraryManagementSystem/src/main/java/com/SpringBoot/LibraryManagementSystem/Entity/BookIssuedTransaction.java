@@ -37,19 +37,19 @@ public class BookIssuedTransaction {
 	private long transactionId;
 
 	@ManyToOne
-	@JoinColumn(name = "bookId", nullable = false)
+	@JoinColumn(name = "bookId")
 	private Book bookId;
 
 	@ManyToOne
-	@JoinColumn(name = "userId", nullable = false)
+	@JoinColumn(name = "userId")
 	private Users userId;
 
 	@ManyToOne
-	@JoinColumn(name = "issued_To", nullable = false)
+	@JoinColumn(name = "issued_To")
 	private Users issued_To;
 
 	@ManyToOne
-	@JoinColumn(name = "issued_By", nullable = false)
+	@JoinColumn(name = "issued_By")
 	private Users issued_By;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/YYYY")
@@ -62,7 +62,7 @@ public class BookIssuedTransaction {
 	private Date bookActualreturndate;
 
 	@ManyToOne
-	@JoinColumn(name = "createdBy", nullable = false)
+	@JoinColumn(name = "createdBy")
 	private Users createdBy;
  
 
@@ -70,7 +70,7 @@ public class BookIssuedTransaction {
 	private Date createdOn;
 
 	@ManyToOne
-	@JoinColumn(name = "modifiedBy", nullable = false)
+	@JoinColumn(name = "modifiedBy")
 	private Users modifiedBy;
 
 

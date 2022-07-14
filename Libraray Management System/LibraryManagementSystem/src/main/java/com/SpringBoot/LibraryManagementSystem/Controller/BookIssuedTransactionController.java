@@ -1,6 +1,7 @@
 package com.SpringBoot.LibraryManagementSystem.Controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +42,7 @@ public class BookIssuedTransactionController {
 	}
 
 	@GetMapping("/getTransactionByTransactionId/{id}")
-	public BookIssuedTransaction getTransactionByTransactionId(@PathVariable Long id) {
+	public Optional<BookIssuedTransaction> getTransactionByTransactionId(@PathVariable Long id) {
 		log.info("Book issued controller called for fetching tranaction by transaction id.");
 		return bookissuedservice.findTransactionByTransactionId(id);
 	}
