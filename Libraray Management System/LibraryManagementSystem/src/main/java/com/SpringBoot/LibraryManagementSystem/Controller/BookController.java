@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.SpringBoot.LibraryManagementSystem.Config.BatchConfiguration;
@@ -20,6 +22,7 @@ import com.SpringBoot.LibraryManagementSystem.Entity.Book;
 import com.SpringBoot.LibraryManagementSystem.Service.BookService;
 
 @RestController
+
 public class BookController {
 
 	private static final Logger log = LoggerFactory.getLogger(BookController.class);
@@ -28,6 +31,7 @@ public class BookController {
 	private BookService bookservice;
 
 	@PostMapping("/books/{libId}")
+	@ResponseStatus(code = HttpStatus.CREATED)
 	public String saveBook(@PathVariable Long libId, @RequestBody Book book) {
 		log.info("Adding book through json in bookController.");
 		bookservice.saveBook(libId, book);
@@ -59,6 +63,7 @@ public class BookController {
 	}
 
 	@PutMapping("/updateBook")
+	@ResponseStatus(code = HttpStatus.CREATED)
 	public Book updateProduct(@RequestBody Book book) {
 		log.info("Updating book details in bookController.");
 		return bookservice.updateBook(book);

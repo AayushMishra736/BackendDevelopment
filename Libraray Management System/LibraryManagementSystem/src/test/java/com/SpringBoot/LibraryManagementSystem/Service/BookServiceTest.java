@@ -46,7 +46,7 @@ public class BookServiceTest {
     @DisplayName("Junit test for save book service.")
 	@Test
 	public void givenUserObject_whenSave_thenReturnUserObject() {
-    Book	book = Book.builder().bookId(10L)
+    Book book = Book.builder().bookId(10L)
                 .activeFlag(1).name("A Revenue Stamp")
                 .author("Amrita Pritam")
                 .bookPrice(670).createdOn(new Date())
