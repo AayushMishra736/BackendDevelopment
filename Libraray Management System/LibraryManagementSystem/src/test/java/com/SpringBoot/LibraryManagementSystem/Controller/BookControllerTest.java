@@ -80,8 +80,6 @@ public class BookControllerTest {
 		BDDMockito.given(bookService.getAllBook()).willReturn(bookList);
 		ResultActions response = mockMvc.perform(get("/getAllBook"));
 		response.andExpect(status().isOk());
-		
-//		.andExpect(jsonPath("$.size()", is(bookList.size())));
 	}
 	
 	@DisplayName("Junit test for get book by book name using rest api")
